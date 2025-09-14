@@ -17,6 +17,7 @@ class ProfileUpdateRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:255'],
+            'avatar' => ['nullable', 'image', 'max:2048'], // Allow image upload with max size of 2MB
             'email' => [
                 'required',
                 'string',
